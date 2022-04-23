@@ -112,7 +112,7 @@ Start application in IDE or via command line:
 - **category** – if this parameter is specified, it returns a JSON array of all recipes of the specified category. Search is case-insensitive, sort the recipes by date (newer first);
 - **name** – if this parameter is specified, it returns a JSON array of all recipes with the names that contain the specified parameter. Search is case-insensitive, sort the recipes by date (newer first).
 
-**Response example for the GET /api/v1/recipe/search/?category=dessert request**:
+**Response example for the GET /api/v1/recipe/search/?category=dessert request:**
 ```
 [
    {
@@ -130,7 +130,7 @@ Start application in IDE or via command line:
 ]
 ```
 
-**Response example for the GET /api/v1/recipe/search/?name=tea request:**:
+**Response example for the GET /api/v1/recipe/search/?name=tea request:**
 ```
 [
    {
