@@ -24,7 +24,7 @@ import javax.validation.constraints.Min;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/recipe")
+@RequestMapping("/api/v1/recipe")
 @Validated
 public class RecipeController {
     private final RecipeService recipeService;
