@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "d19ea7df-834c-429d-aefd-f2ff60decedd",
+		"name": "Recipes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RecipeController",
+			"item": [
+				{
+					"name": "Save Recipe",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "C00k1es.",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "CamelCaseRecipe@somewhere.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"name\": \"Mint Tea\",\n   \"category\": \"beverage\",\n   \"description\": \"Light, aromatic and refreshing beverage, ...\",\n   \"ingredients\": [\"boiled water\", \"honey\", \"fresh mint leaves\"],\n   \"directions\": [\"Boil water\", \"Pour boiling hot water into a mug\", \"Add fresh mint leaves\", \"Mix and let the mint leaves seep for 3-5 minutes\", \"Add honey and mix again\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8881/api/v1/recipe/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8881",
+							"path": [
+								"api",
+								"v1",
+								"recipe",
+								"new"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Recipe",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "C00k1es.",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "CamelCaseRecipe@somewhere.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"name\": \"Fresh Mint Tea\",\n   \"category\": \"beverage\",\n   \"description\": \"Light, aromatic and refreshing beverage, ...\",\n   \"ingredients\": [\"boiled water\", \"honey\", \"fresh mint leaves\"],\n   \"directions\": [\"Boil water\", \"Pour boiling hot water into a mug\", \"Add fresh mint leaves\", \"Mix and let the mint leaves seep for 3-5 minutes\", \"Add honey and mix again\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8881/api/v1/recipe/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8881",
+							"path": [
+								"api",
+								"v1",
+								"recipe",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Recipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8881/api/v1/recipe/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8881",
+							"path": [
+								"api",
+								"v1",
+								"recipe",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8881/api/v1/recipe/search?category=beverage",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8881",
+							"path": [
+								"api",
+								"v1",
+								"recipe",
+								"search"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "beverage"
+								},
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Recipe",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8881/api/v1/recipe/{{id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8881",
+							"path": [
+								"api",
+								"v1",
+								"recipe",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UserController",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"email\": \"CamelCaseRecipe@somewhere.com\",\n   \"password\": \"C00k1es.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8881/api/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8881",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
